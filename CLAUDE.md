@@ -48,11 +48,11 @@
 - [x] `.claude/settings.json` שחוסם קריאה של `.env` ושל `.env.*`
 - [x] `.vercelignore`
 - [x] `CLAUDE.md` (הקובץ הזה)
-- [ ] המשתמש יוצר ידנית ב-GitHub ריפו ציבורי ריק בשם `joke-app` (בלי README, בלי `.gitignore` ובלי License)
-- [ ] לבדוק ש-`git` מותקן
-- [ ] `git init -b main`, קומיט ראשון
-- [ ] `git remote add origin https://github.com/ido0308-blip/joke-app.git` ואז `git push -u origin main`. בדחיפה הראשונה ייפתח חלון התחברות של GitHub בדפדפן, והמשתמש מאשר בעצמו
-- [ ] לעדכן את הרשימה הזו, ולהציג למשתמש את כתובת הריפו
+- [x] המשתמש יוצר ידנית ב-GitHub ריפו ציבורי ריק בשם `joke-app` (בלי README, בלי `.gitignore` ובלי License)
+- [x] לבדוק ש-`git` מותקן
+- [x] `git init -b main`, קומיט ראשון
+- [x] `git remote add origin https://github.com/ido0308-blip/joke-app.git` ואז `git push -u origin main`. בדחיפה הראשונה ייפתח חלון התחברות של GitHub בדפדפן, והמשתמש מאשר בעצמו
+- [x] לעדכן את הרשימה הזו, ולהציג למשתמש את כתובת הריפו
 
 ## עבודה במיילסטונים
 - בונים לפי `spec/MILESTONES.md`, מיילסטון אחרי מיילסטון. לכל מיילסטון המשתמש פותח שיחה חדשה בשם `milestone-N`.
