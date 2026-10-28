@@ -181,6 +181,29 @@
       font-size: 17px;
     }
 
+    /* כפתור שתף */
+    .btn-share {
+      display: none;
+      font-family: 'Fredoka', system-ui, sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--ink);
+      background: #25D366;
+      border: 3px solid var(--ink);
+      border-radius: 999px;
+      padding: 10px 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 0 var(--ink);
+      text-decoration: none;
+      transition: box-shadow 0.08s, transform 0.08s;
+      margin-top: 8px;
+    }
+    .btn-share:active {
+      box-shadow: 0 1px 0 var(--ink);
+      transform: translateY(3px);
+    }
+    .bubble[data-state="joke"] .btn-share { display: inline-block; }
+
     /* תחתית */
     .footer {
       font-size: 13px;
@@ -250,6 +273,7 @@
       <div id="bubble-text" class="bubble-text" aria-live="polite">
         לוחצים על הכפתור, והבדיחה מופיעה כאן
       </div>
+      <a id="btn-share" class="btn-share" target="_blank" rel="noopener noreferrer">📲 שתפו</a>
     </div>
 
     <footer class="footer">מיישם AI ואוטומציה · 53500</footer>
@@ -260,6 +284,7 @@
     const bubble    = document.getElementById('bubble');
     const mascot    = document.getElementById('mascot');
     const bubbleText = document.getElementById('bubble-text');
+    const btnShare  = document.getElementById('btn-share');
 
     const MASCOTS = {
       idle:  'assets/mascot-idle.svg',
@@ -293,6 +318,7 @@
         if (data.joke) {
           setState('joke', data.joke);
           btn.textContent = 'עוד בדיחה!';
+          btnShare.href = 'https://wa.me/?text=' + encodeURIComponent(data.joke);
         } else {
           setState('error', data.error ?? 'משהו השתבש. נסו שוב.');
           btn.textContent = 'לנסות שוב';
